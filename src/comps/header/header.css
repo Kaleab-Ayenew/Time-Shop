@@ -1,0 +1,183 @@
+.header-section {
+  padding: 20px 65px;
+  background-color: var(--light-orange);
+  margin-bottom: 150px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo-name {
+  font-weight: 600;
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.header-float {
+  display: none;
+}
+
+.header__menu-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__menu-list li {
+  margin: 0 25px;
+  color: var(--gray);
+}
+
+.header__menu-list li a {
+  position: relative;
+}
+
+.header__menu-list li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: var(--orange);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.header__menu-list li a:hover,
+.header__menu-list li.active-link a {
+  color: var(--black);
+}
+
+.header__menu-list li a:hover::after,
+.header__menu-list li.active-link a::after {
+  transform: scaleX(1);
+}
+
+.header__menu-list li.list-button {
+  background-color: var(--green);
+  padding: 9px 25px;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px var(--shadow);
+  cursor: pointer;
+}
+
+.header__menu-list li.list-button a:hover {
+  color: white;
+}
+
+.header__menu-list li.list-button a:hover::after {
+  transform: scaleX(0);
+}
+
+.header__intro-div {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__intro-text {
+  width: 44%;
+}
+
+.header__intro-text h1 {
+  max-width: 15ch;
+}
+
+.header__intro-text p {
+  margin-top: 25px;
+}
+
+.header__explore-button {
+  padding: 12px 33px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-top: 45px;
+  box-shadow: 0 10px 15px var(--shadow);
+  cursor: pointer;
+}
+
+.header__image-box {
+  width: 54%;
+  background-image: url(../../images/watches.png);
+  background-position: 100% 50%;
+  position: relative;
+}
+
+.header__msg-box-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  height: 60px;
+  background-color: white;
+  font-size: 0.79rem;
+  box-shadow: 0 5px 15px var(--shadow);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.header__msg-box-right {
+  position: absolute;
+  right: 80px;
+  bottom: 30px;
+  width: 100px;
+  height: 80px;
+  background-color: white;
+  font-size: 0.79rem;
+  box-shadow: 0 5px 15px var(--shadow);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.header__card-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__card-holder div {
+  border-radius: 10px;
+  width: 28%;
+  padding: 15px 15px;
+  box-shadow: 0 5px 10px var(--shadow);
+  background-color: white;
+  position: relative;
+  bottom: -100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__card-holder i {
+  align-self: center;
+  font-size: 3rem;
+  color: var(--orange);
+  margin-top: 20px;
+}
+
+.header__card-holder h2 {
+  margin: 15px 0;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.header__card-holder p {
+  text-align: center;
+  font-size: 1.3vw;
+}

@@ -18,9 +18,9 @@ body {
 :root {
   --light-orange: rgb(255, 250, 242);
   --black: rgb(0, 4, 28);
-  --orange: rgb(255, 180, 68);
-  --green: rgb(35, 255, 160);
-  --gray: rgb(191, 191, 191);
+  --orange: rgb(255, 153, 0);
+  --green: rgb(34, 202, 129);
+  --gray: rgb(119, 119, 119);
   --shadow: rgba(210, 210, 210);
   --title-font: "Fira Sans", sans-serif;
   --body-font: "DM Sans", sans-serif;

@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--title-font);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.9rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  color: var(--gray);
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
