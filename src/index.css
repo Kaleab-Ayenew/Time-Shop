@@ -22,6 +22,7 @@ body {
   --green: rgb(34, 202, 129);
   --gray: rgb(119, 119, 119);
   --shadow: rgba(210, 210, 210);
+  --sky-blue: rgb(229, 242, 255);
   --title-font: "Fira Sans", sans-serif;
   --body-font: "DM Sans", sans-serif;
 }

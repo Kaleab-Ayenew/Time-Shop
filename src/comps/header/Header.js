@@ -71,17 +71,17 @@ function Header(props) {
       </div>
       <div className="header__card-holder">
         <div>
-          <i class="fa-solid fa-truck-fast"></i>
+          <i className="fa-solid fa-truck-fast"></i>
           <h2>Free Shipping</h2>
           <p>Free Shipping On All Online Order.</p>
         </div>
         <div>
-          <i class="fa-solid fa-headset"></i>
+          <i className="fa-solid fa-headset"></i>
           <h2>24/7 Support</h2>
           <p>Contact Us Anytime For Your Problem.</p>
         </div>
         <div>
-          <i class="fa-solid fa-credit-card"></i>
+          <i className="fa-solid fa-credit-card"></i>
           <h2>Secure Payment</h2>
           <p>Hey, Don't Worry. We Ensure Secure Transaction</p>
         </div>
