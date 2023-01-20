@@ -5,12 +5,12 @@
   align-items: center;
 }
 
-.testimonials_section h1 {
+.testimonials_section > h1 {
   text-align: center;
   font-size: 2rem;
 }
 
-.testimonials_section p {
+.testimonials_section > p {
   max-width: 70ch;
   text-align: center;
   margin-top: 20px;

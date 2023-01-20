@@ -1,0 +1,75 @@
+.swiper-slide-box {
+  width: 95%;
+  min-height: 250px;
+  background-color: white;
+  box-shadow: 0 0 10px var(--shadow);
+  border-radius: 20px;
+  margin: 40px 0;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: grab;
+}
+
+.swiper-slide-box:active {
+  cursor: grabbing;
+}
+
+.swiper-slide-box > i {
+  font-size: 3.7rem;
+  align-self: start;
+  color: var(--gray);
+  opacity: 0.5;
+}
+
+.swiper-slide-box > p {
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 10px;
+  text-align: left;
+}
+
+.swiper-box__person-info {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-box__img-holder {
+  margin-right: 15px;
+}
+
+.swiper-box__img-holder img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.swiper-box__info-holder {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.swiper-box__info-holder > span > i {
+  color: var(--orange);
+  font-size: 0.8rem;
+}
+
+.swiper-box__info-holder > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-box__info-holder > div:nth-child(1) > span:nth-child(1) {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.swiper-box__info-holder > div:nth-child(1) > span:nth-child(2) {
+  color: var(--gray);
+  font-size: 0.7rem;
+  text-align: left;
+}

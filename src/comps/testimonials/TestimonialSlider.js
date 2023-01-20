@@ -1,6 +1,12 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+//Testimonial Card
+import TestimonialCard from "./TestimonialCard";
+
+//Testimonial Data
+import testimonialData from "./testimonialData";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,6 +19,17 @@ import { Pagination, Navigation } from "swiper";
 import "./testimonials-slider.css";
 
 function TestimonialSlider(props) {
+  const testimonials = testimonialData;
+  const renderedCards = testimonials.map((item, i) => (
+    <SwiperSlide>
+      <TestimonialCard
+        key={i + 1}
+        img={require(`../../images/testimonials/${i + 1}.jpg`)}
+        {...item}
+      />
+    </SwiperSlide>
+  ));
+
   return (
     <div className="testimonials__slider-container">
       <Swiper
@@ -24,33 +41,7 @@ function TestimonialSlider(props) {
         loopedSlides={3}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="swiper-slide-box">1</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">2</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">3</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">4</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">5</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">6</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">7</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">8</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="swiper-slide-box">9</div>
-        </SwiperSlide>
+        {renderedCards}
       </Swiper>
       <i className="fa-solid fa-arrow-right next-btn"></i>
       <i className="fa-solid fa-arrow-left prev-btn"></i>
