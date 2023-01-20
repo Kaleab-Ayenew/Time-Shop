@@ -20,7 +20,7 @@ function Header(props) {
             <li>
               <a href="#">Contact</a>
             </li>
-            <li className="list-button">
+            <li className="list-button circle-feedback">
               <a href="#">Buy Now</a>
             </li>
           </ul>
@@ -55,17 +55,14 @@ function Header(props) {
             Every man needs a good, dolid watch, my favorite watch is the
             presidential Rolex.
           </p>
-          <button className="header__explore-button">Explore More</button>
+          <button className="header__explore-button circle-feedback">
+            Explore More
+          </button>
         </div>
         <div className="header__image-box">
           <div className="header__msg-box-left">
             <strong>Get Up To 10% Off</strong>
             <p>You can get upto 10 precent discount form here</p>
-          </div>
-
-          <div className="header__msg-box-right">
-            <strong>Get One Now</strong>
-            <p>Order one at the nearest store</p>
           </div>
         </div>
       </div>

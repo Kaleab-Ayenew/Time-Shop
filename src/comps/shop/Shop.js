@@ -5,12 +5,12 @@ import ProductCard from "./ProductCard";
 import "./shop.css";
 function Shop(props) {
   const products = [
-    { title: "Apple Red Watch", price: 100, stars: 4 },
-    { title: "Apple Black Watch", price: 170, stars: 3 },
+    { title: "Apple Dark Red Watch", price: 100, stars: 4 },
+    { title: "Apple Light Pink Watch", price: 170, stars: 3 },
     { title: "Apple Black Watch", price: 560, stars: 5 },
-    { title: "Apple Black Watch", price: 270, stars: 2 },
-    { title: "Apple Black Watch", price: 190, stars: 5 },
-    { title: "Apple Black Watch", price: 470, stars: 4 },
+    { title: "Apple Light Pink Watch(Analoge)", price: 270, stars: 2 },
+    { title: "Apple Red Watch", price: 190, stars: 5 },
+    { title: "Apple White Watch", price: 470, stars: 4 },
   ];
   const renderedProducts = products.map((item, i) => (
     <ProductCard

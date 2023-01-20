@@ -1,11 +1,12 @@
 .shop_section {
-  padding: 0 65px;
+  padding: 65px;
+  margin-top: 50px;
 }
 
 .shop_section h3 {
   text-align: center;
-  font-size: 1.8vw;
-  margin: 15px 0;
+  font-size: 2rem;
+  margin: 20px 0;
 }
 
 .shop_section p {

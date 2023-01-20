@@ -30,3 +30,26 @@ a {
   color: unset;
   text-decoration: unset;
 }
+
+.cir {
+  width: 6px;
+  border-radius: 50%;
+  height: 6px;
+  background: rgba(144, 145, 144, 0.5);
+  transform-origin: center center;
+  opacity: 0;
+}
+
+.fill {
+  animation: fill-animation 0.9s ease;
+}
+@keyframes fill-animation {
+  0% {
+    transform: scale(5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(100);
+    opacity: 0;
+  }
+}

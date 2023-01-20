@@ -5,7 +5,7 @@ function ProductCard(props) {
   const renderedStars = [];
   console.log(props);
   for (let i = 0; i < props.stars; i++) {
-    renderedStars.push(<i className="fa-solid fa-star"></i>);
+    renderedStars.push(<i class="ri-star-fill"></i>);
   }
   return (
     <div className="shop__product-card">
@@ -16,12 +16,14 @@ function ProductCard(props) {
       <div className="shop__product-info">
         <span className="shop__product-price">${props.price}</span>
         <span>
-          {renderedStars} {Number(props.stars) * 5}
+          {renderedStars} {"("}
+          {Number(props.stars) * 5}
+          {")"}
         </span>
       </div>
       <div className="shop__product-btn-group">
-        <button>Add to Cart</button>
-        <button>Buy Now</button>
+        <button className="circle-feedback">Add to Cart</button>
+        <button className="circle-feedback">Buy Now</button>
       </div>
     </div>
   );
