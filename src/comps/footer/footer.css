@@ -1,0 +1,22 @@
+.footer_section {
+  background-color: var(--black);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 65px;
+}
+
+.footer_section ul {
+  list-style: none;
+}
+
+.footer_section li {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.footer_section li.list-title {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin: 10px 0;
+}
