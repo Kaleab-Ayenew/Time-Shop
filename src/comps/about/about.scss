@@ -76,3 +76,23 @@
 .about__image-container img {
   width: 150%;
 }
+
+@media screen and (max-width: 450px) {
+  .about_section {
+    padding: 0 10px;
+    flex-direction: column-reverse;
+  }
+  .about__info-container {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .about__image-container {
+    width: 100%;
+  }
+  .about__info-container h2 {
+    font-size: 2rem;
+  }
+  .about__list-container li {
+    white-space: unset;
+  }
+}

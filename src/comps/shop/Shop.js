@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 //CSS Import
-import "./shop.css";
+import "./shop.scss";
 function Shop(props) {
   const products = [
     { title: "Apple Dark Red Watch", price: 100, stars: 4 },
@@ -20,7 +20,7 @@ function Shop(props) {
     />
   ));
   return (
-    <section className="shop_section">
+    <section id="shop" className="shop_section">
       <h3>Take Our Product</h3>
       <p>We have digital watches of all forms and designs to fit your style.</p>
       <div className="shop__product-list">{renderedProducts}</div>

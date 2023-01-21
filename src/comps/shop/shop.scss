@@ -1,0 +1,43 @@
+.shop_section {
+  padding: 65px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop_section > h3 {
+  font-size: 2rem;
+  margin: 20px 0;
+  position: relative;
+  align-self: center;
+}
+
+.shop_section > h3::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 80%;
+  background-color: var(--orange);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+.shop_section p {
+  text-align: center;
+}
+
+.shop__product-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+@media screen and (max-width: 450px) {
+  .shop_section {
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+}

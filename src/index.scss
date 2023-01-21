@@ -17,7 +17,7 @@ body {
 }
 
 :root {
-  --light-orange: rgb(255, 243, 225);
+  --light-orange: rgb(255, 250, 243);
   --black: rgb(5, 9, 32);
   --orange: rgb(255, 153, 0);
   --green: rgb(34, 202, 129);
@@ -27,3 +27,30 @@ body {
   --title-font: "Fira Sans", sans-serif;
   --body-font: "Poppins", sans-serif;
 }
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  padding: 2px 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+  border-radius: 5px;
+}
+
+//SCSS Variables
+
+$mobile-breakpoint: 450px;

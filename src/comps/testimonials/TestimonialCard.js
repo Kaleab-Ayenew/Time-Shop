@@ -1,13 +1,13 @@
 import React from "react";
-import "./testimonial-card.css";
+import "./testimonial-card.scss";
 function TestimonialCard(props) {
   const renderedStars = [];
   for (let i = 0; i < props.rating; i++) {
-    renderedStars.push(<i class="ri-star-fill"></i>);
+    renderedStars.push(<i key={i + 1} className="ri-star-fill"></i>);
   }
   return (
     <div className="swiper-slide-box">
-      <i class="fa-solid fa-quote-left"></i>
+      <i className="fa-solid fa-quote-left"></i>
       <p>{props.text}</p>
       <div className="swiper-box__person-info">
         <div className="swiper-box__img-holder">

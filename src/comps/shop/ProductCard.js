@@ -1,14 +1,23 @@
 import React from "react";
-import "./product-card.css";
-import img1 from "../../images/products/1.png";
+import "./product-card.scss";
+import Aos from "aos";
+
 function ProductCard(props) {
   const renderedStars = [];
   console.log(props);
   for (let i = 0; i < props.stars; i++) {
-    renderedStars.push(<i class="ri-star-fill"></i>);
+    renderedStars.push(<i key={i + 1} className="ri-star-fill"></i>);
   }
+  React.useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="shop__product-card">
+    <div
+      data-aos="fade-up"
+      data-aos-delay={150}
+      data-aos-duration={1000}
+      className="shop__product-card"
+    >
       <div className="shop__product-img-holder">
         <img src={props.img} alt="watch" />
       </div>

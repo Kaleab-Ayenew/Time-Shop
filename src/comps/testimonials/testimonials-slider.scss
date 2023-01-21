@@ -56,3 +56,24 @@
   background-color: white;
   box-shadow: 0 0 10px var(--shadow);
 }
+
+@media screen and (max-width: 450px) {
+  .swiper {
+    width: 100%;
+  }
+  .next-btn {
+    display: none;
+  }
+  .prev-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .next-btn {
+    display: none;
+  }
+  .prev-btn {
+    display: none;
+  }
+}

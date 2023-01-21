@@ -1,5 +1,5 @@
 import React from "react";
-import "./offers.css";
+import "./offers.scss";
 import OfferCard from "./OfferCard";
 function Offers(props) {
   return (

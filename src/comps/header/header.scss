@@ -9,10 +9,49 @@ header {
   flex-direction: column;
 }
 
+header .menu-list-icon{
+  display: none;
+}
+
+header.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 20;
+  padding: 10px 20px;
+  box-shadow: 0 1px 10px var(--shadow);
+  animation: header-drop 0.5s ease;
+}
+
+@keyframes header-drop {
+  0%{
+    transform: translateY(-200px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
 .header__logo-name {
   font-weight: 600;
   font-family: var(--title-font);
   font-size: 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.header__logo-name::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 80%;
+  background-color: var(--orange);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
 }
 
 .header-main {
@@ -116,29 +155,19 @@ header {
 
 .header__image-box {
   width: 54%;
-  background-image: url(../../images/watches.png);
-  background-position: 100% 50%;
   position: relative;
+}
+
+.header__image-box img {
+  object-fit: cover;
+  width: 120%;
 }
 
 .header__msg-box-left {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 50px;
+  bottom: 50px;
   width: 180px;
-  background-color: white;
-  font-size: 0.79rem;
-  box-shadow: 0 5px 15px var(--shadow);
-  border-radius: 10px;
-  padding: 5px;
-}
-
-.header__msg-box-right {
-  position: absolute;
-  right: 80px;
-  bottom: 30px;
-  width: 100px;
-  height: 80px;
   background-color: white;
   font-size: 0.79rem;
   box-shadow: 0 5px 15px var(--shadow);
@@ -180,4 +209,115 @@ header {
 .header__card-holder p {
   text-align: center;
   font-size: 1.3vw;
+}
+
+@media screen and (max-width: 450px) {
+  .header-section {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+  .header__intro-div {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .header__msg-box-left {
+    display: none;
+  }
+  .header__intro-text h1 {
+    font-size: 2.4rem;
+  }
+  .header__intro-text {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .header__image-box {
+    width: 100%;
+  }
+  .header__image-box img {
+    transform: scale(1.15) translateX(-40px);
+    transform-origin: center center;
+  }
+  .header__card-holder {
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__card-holder > div {
+    width: 80%;
+    margin: 20px 0;
+  }
+
+  .header__card-holder > div > i {
+    font-size: 2rem;
+  }
+
+  .header__card-holder > div > h2 {
+    font-size: 1rem;
+    margin: 9px;
+  }
+
+  .header__card-holder > div > p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  .header__explore-button {
+    cursor: unset;
+  }
+}
+
+
+@media screen and (max-width: 950px){
+  .header-section {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+  .header-main {
+    justify-content: center;
+  }
+  .header__menu-list {
+    display: none;
+  }
+  header{
+    padding: 1px 10px;
+  }
+  header .menu-list-icon{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    font-size: 2rem;
+    z-index: 35;
+  }
+  .header-float{
+    display: block;
+    height: 50vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+    max-height: 0;
+    transition: all 0.5s ease;
+    overflow-y: hidden;
+    visibility: hidden;
+  }
+  .header-float.expand{
+    visibility: visible;
+    max-height: 60vh;
+  }
+  .header-float ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .header-float ul li{
+    padding: 20px 0;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid var(--gray);
+    
+  }
 }

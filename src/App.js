@@ -1,4 +1,5 @@
-import "./public.css";
+import "./public.scss";
+import "aos/dist/aos.css";
 import React from "react";
 
 import Header from "./comps/header/Header";
@@ -11,12 +12,7 @@ import Footer from "./comps/footer/Footer";
 
 import Offers from "./comps/offers/Offers";
 function App() {
-  React.useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "/button.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+  const [buttonAdded, setButtonAdded] = React.useState(false);
   return (
     <div className="App">
       <Header />

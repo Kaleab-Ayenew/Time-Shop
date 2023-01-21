@@ -1,9 +1,13 @@
+import Aos from "aos";
 import React from "react";
-import "./about.css";
+import "./about.scss";
 
 function About(props) {
+  React.useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <section className="about_section">
+    <section id="about" className="about_section">
       <div className="about__info-container">
         <span style={{ color: "var(--orange)" }}>About Our Watch</span>
         <h2>For Easy Living, Get the Best & Fashionable Smart Watch</h2>
@@ -45,7 +49,12 @@ function About(props) {
           Read More
         </a>
       </div>
-      <div className="about__image-container">
+      <div
+        data-aos="fade-up"
+        data-aos-delay={500}
+        data-aos-duration={1000}
+        className="about__image-container"
+      >
         <img src={require("../../images/about/image-2.png")} />
       </div>
     </section>

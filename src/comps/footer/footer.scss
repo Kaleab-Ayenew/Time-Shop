@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 65px;
+  margin-top: 70px;
 }
 
 .footer_section ul {
@@ -19,4 +20,17 @@
   font-weight: bold;
   font-size: 1.7rem;
   margin: 10px 0;
+}
+
+@media screen and (max-width: 450px) {
+  .footer_section {
+    padding: 10px 10px;
+    flex-direction: column;
+  }
+  .footer_section li{
+    padding-left: 30px;
+  }
+  .footer_section li.list-title{
+    padding-left: 0px;
+  }
 }

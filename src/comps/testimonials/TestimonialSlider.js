@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 //Testimonial Card
@@ -16,29 +16,44 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 //My Own CSS
-import "./testimonials-slider.css";
+import "./testimonials-slider.scss";
 
 function TestimonialSlider(props) {
   const testimonials = testimonialData;
+  let [slides, setSlides] = React.useState(3);
+  function slideChecker() {
+    if (window.innerWidth <= 800) {
+      setSlides(1);
+      console.log("The 1");
+    } else if (window.innerWidth > 800 && window.innerWidth <= 1030) {
+      setSlides(2);
+      console.log("The 2");
+    } else if (window.innerWidth > 1030) {
+      setSlides(3);
+    }
+  }
+  window.onresize = slideChecker;
   const renderedCards = testimonials.map((item, i) => (
-    <SwiperSlide>
+    <SwiperSlide key={i + 1}>
       <TestimonialCard
-        key={i + 1}
         img={require(`../../images/testimonials/${i + 1}.jpg`)}
         {...item}
       />
     </SwiperSlide>
   ));
-
+  React.useLayoutEffect(() => {
+    slideChecker();
+  }, []);
+  console.log("the page was rendered");
   return (
     <div className="testimonials__slider-container">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={slides}
         navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
         pagination={{ clickable: true }}
         modules={[Navigation, Pagination]}
         loop={true}
-        loopedSlides={3}
+        loopedSlides={slides}
         className="mySwiper"
       >
         {renderedCards}
