@@ -8,7 +8,7 @@ function Header(props) {
   const linksRef = React.useRef();
   const [headerOpen, setHeaderOpen] = React.useState(false);
   window.onscroll = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 170) {
       headerRef.current.classList.add("sticky");
     } else {
       headerRef.current.classList.remove("sticky");

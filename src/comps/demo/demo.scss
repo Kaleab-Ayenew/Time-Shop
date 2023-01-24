@@ -65,6 +65,22 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 850px) {
+  .demo__video-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .demo__video-container video{
+    width: 95%;
+  }
+  .demo__video-container i{
+    font-size: 5rem;
+    top:40%;
+    left: 45%;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .demo__video-container video {
     width: 100%;
@@ -72,10 +88,10 @@
     border-radius: 10px;
   }
   .demo__video-container i {
-    font-size: 3rem;
+    font-size: 4rem;
     position: absolute;
-    left: 45%;
-    top: 76px;
+    left: 43%;
+    top: 70px;
     cursor: unset;
   }
 }

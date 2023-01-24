@@ -22,6 +22,16 @@
   margin: 10px 0;
 }
 
+@media screen and (max-width: 750px) {
+  .footer_section{
+    flex-wrap: wrap;
+  }
+  .footer_section ul{
+    min-width: 100px;
+    margin: 0 10px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .footer_section {
     padding: 10px 10px;

@@ -3,14 +3,16 @@ import React from "react";
 
 function About2(props) {
   React.useEffect(() => {
-    Aos.init();
+    Aos.init({
+      easing: "ease",
+    });
   }, []);
   return (
     <section className="about_section">
       <div
         data-aos="fade-up"
         data-aos-delay={300}
-        data-aos-duration={1000}
+        data-aos-duration={2000}
         className="about__image-container"
       >
         <img src={require("../../images/about/image-1.png")} />

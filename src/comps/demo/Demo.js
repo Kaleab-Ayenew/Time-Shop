@@ -33,7 +33,7 @@ function Demo(props) {
             className="ri-play-circle-line play-btn"
           ></i>
         )}
-        <video ref={vidRef}>
+        <video poster={require("../../images/demo/poster.jpg")} ref={vidRef}>
           <source src={require("../../videos/demo.mp4")} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

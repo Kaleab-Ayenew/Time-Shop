@@ -41,3 +41,13 @@
     margin-top: 20px;
   }
 }
+
+@media screen and (max-width: 950px){
+  .shop_section{
+    margin-top: 140px;
+  }
+  .shop__product-card{
+    min-width: 340px;
+  }
+  
+}

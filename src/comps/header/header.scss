@@ -18,11 +18,13 @@ header.sticky{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: rgba($color: #fff, $alpha: 0.7);
   z-index: 20;
   padding: 10px 20px;
   box-shadow: 0 1px 10px var(--shadow);
   animation: header-drop 0.5s ease;
+  border-bottom: 1px solid lightgray;
+  backdrop-filter: blur(5px);
 }
 
 @keyframes header-drop {
@@ -211,6 +213,101 @@ header.sticky{
   font-size: 1.3vw;
 }
 
+@media screen and (max-width: 950px){
+  .header-section {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+  .header-main {
+    justify-content: center;
+  }
+  .header__menu-list {
+    display: none;
+  }
+  header{
+    padding: 1px 10px;
+  }
+  header .menu-list-icon{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    font-size: 2rem;
+    z-index: 35;
+  }
+  .header-float{
+    display: block;
+    height: 50vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+    max-height: 0;
+    transition: all 0.5s ease;
+    overflow-y: hidden;
+    visibility: hidden;
+    
+  }
+  .header-float.expand{
+    visibility: visible;
+    max-height: 60vh;
+  }
+  .header-float ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .header-float ul li{
+    padding: 20px 0;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid var(--gray);
+    
+  }
+  .header__card-holder p{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .header__intro-div{
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__intro-text{
+    width: 100%;
+
+  }
+  .header__image-box{
+    width: 80%;
+  }
+  .header__intro-text p{
+    max-width: 50ch;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .header__msg-box-left{
+    display: none;
+  }
+  .header__image-box{
+    width: 95%;
+  }
+  .header__image-box img{
+    position: relative;
+    left: -60px;
+  }
+  .header__card-holder{
+    bottom: -100px;
+  }
+  .header__card-holder div{
+    width: 32%;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .header-section {
     padding: 10px 10px;
@@ -267,57 +364,3 @@ header.sticky{
 }
 
 
-@media screen and (max-width: 950px){
-  .header-section {
-    padding: 10px 10px;
-    margin-bottom: 10px;
-  }
-  .header-main {
-    justify-content: center;
-  }
-  .header__menu-list {
-    display: none;
-  }
-  header{
-    padding: 1px 10px;
-  }
-  header .menu-list-icon{
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 23px;
-    font-size: 2rem;
-    z-index: 35;
-  }
-  .header-float{
-    display: block;
-    height: 50vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    padding: 20px;
-    padding-top: 60px;
-    background-color: white;
-    width: 100%;
-    z-index: 2;
-    max-height: 0;
-    transition: all 0.5s ease;
-    overflow-y: hidden;
-    visibility: hidden;
-  }
-  .header-float.expand{
-    visibility: visible;
-    max-height: 60vh;
-  }
-  .header-float ul{
-    display: flex;
-    flex-direction: column;
-  }
-  .header-float ul li{
-    padding: 20px 0;
-    text-align: left;
-    width: 100%;
-    border-bottom: 1px solid var(--gray);
-    
-  }
-}

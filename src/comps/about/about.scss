@@ -2,6 +2,7 @@
   padding: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .about__info-container {
@@ -75,6 +76,18 @@
 
 .about__image-container img {
   width: 150%;
+}
+
+@media screen and (max-width: 850px) {
+  .about_section{
+    flex-direction: column-reverse;
+  }
+  .about__image-container{
+    width: 100%;
+  }
+  .about__info-container{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 450px) {
