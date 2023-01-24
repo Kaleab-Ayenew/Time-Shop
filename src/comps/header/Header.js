@@ -105,8 +105,9 @@ function Header(props) {
             <span style={{ color: "var(--orange)" }}>Daily Use</span>
           </h1>
           <p>
-            Every man needs a good, dolid watch, my favorite watch is the
-            presidential Rolex.
+            Welcome to our website! We specialize in smart watches and
+            accessories. Our goal is to make your life easier with the help of
+            technology.
           </p>
           <button className="header__explore-button circle-feedback">
             Explore More

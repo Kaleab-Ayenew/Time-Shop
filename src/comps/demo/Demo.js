@@ -18,8 +18,8 @@ function Demo(props) {
       <h1>Product Demo</h1>
       <h2>Get More Information About Our Products</h2>
       <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout.
+        Whether you're looking for a timeless classic, something bold and
+        modern, or something unique, you can find it all here.
       </p>
       <div className="demo__video-container">
         {videoPlaying ? (

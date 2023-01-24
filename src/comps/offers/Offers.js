@@ -5,10 +5,10 @@ function Offers(props) {
   return (
     <section className="offers_section">
       <h1>Limited Time Offer</h1>
-      <h2>50% Discount on All SX40 Model Products</h2>
+      <h2>50% Discount on all Apple Smart Watches</h2>
       <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout.
+        We have gone all out and put together a selection of our top-of-the-line
+        wrist watches at discounted prices just for you.
       </p>
       <div className="offers__offer-card-container">
         <OfferCard img={require("../../images/products/5.png")} />
