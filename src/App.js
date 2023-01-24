@@ -13,6 +13,24 @@ import Footer from "./comps/footer/Footer";
 import Offers from "./comps/offers/Offers";
 function App() {
   const [buttonAdded, setButtonAdded] = React.useState(false);
+  window.addEventListener("scroll", () => {
+    let sections = document.querySelectorAll("section");
+    let current = "home";
+    sections.forEach((item, i) => {
+      if (item.offsetTop <= window.scrollY) {
+        current = item.id ? item.id : "about";
+      }
+
+      document
+        .querySelectorAll(".header__menu-list li, .header-float li")
+        .forEach((item) => {
+          item.classList.remove("active-link");
+          if (item.querySelector(`a[href="#${current}"]`)) {
+            item.classList.add("active-link");
+          }
+        });
+    });
+  });
   return (
     <div className="App">
       <Header />

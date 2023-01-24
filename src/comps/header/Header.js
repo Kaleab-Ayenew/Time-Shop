@@ -5,7 +5,8 @@ import Aos from "aos";
 
 function Header(props) {
   const headerRef = React.useRef();
-  const linksRef = React.useRef();
+  const linksRef1 = React.useRef();
+  const linksRef2 = React.useRef();
   const [headerOpen, setHeaderOpen] = React.useState(false);
   window.onscroll = () => {
     if (window.scrollY > 170) {
@@ -15,17 +16,24 @@ function Header(props) {
     }
   };
 
-  function activeLinkStyler(e) {
-    Array.from(linksRef.current.querySelectorAll("li")).forEach((item) =>
-      item.classList.remove("active-link")
+  function activeLinkStyler1(e) {
+    Array.from(e.currentTarget.parentNode.querySelectorAll("li")).forEach(
+      (item) => item.classList.remove("active-link")
     );
     e.currentTarget.classList.add("active-link");
   }
   React.useEffect(() => {
     Aos.init();
-    Array.from(linksRef.current.querySelectorAll("li")).forEach((item) =>
+    Array.from(linksRef1.current.querySelectorAll("li")).forEach((item) =>
       item.addEventListener("click", (e) => {
-        activeLinkStyler(e);
+        activeLinkStyler1(e);
+        console.log("This is working");
+      })
+    );
+
+    Array.from(linksRef2.current.querySelectorAll("li")).forEach((item) =>
+      item.addEventListener("click", (e) => {
+        activeLinkStyler1(e);
         console.log("This is working");
       })
     );
@@ -51,7 +59,7 @@ function Header(props) {
 
         <div className="header-main">
           <span className="header__logo-name">Timeshop</span>
-          <ul ref={linksRef} className="header__menu-list">
+          <ul ref={linksRef1} className="header__menu-list">
             <li id="home-link" className="active-link">
               <a href="#home">Home</a>
             </li>
@@ -67,24 +75,25 @@ function Header(props) {
             <li id="testimonials-link">
               <a href="#testimonials">Testimonials</a>
             </li>
-            <li className="list-button circle-feedback">
-              <a href="#shop">Buy Now</a>
-            </li>
+            <li className="list-button circle-feedback">Buy Now</li>
           </ul>
         </div>
         <div className={`header-float ${headerOpen ? "expand" : undefined}`}>
-          <ul className="header__menu-list">
-            <li>
-              <a href="#">Home</a>
+          <ul ref={linksRef2} className="header__menu-list">
+            <li id="home-link" className="active-link">
+              <a href="#home">Home</a>
             </li>
-            <li>
-              <a href="#">Feature</a>
+            <li id="shop-link">
+              <a href="#shop">Products</a>
             </li>
-            <li>
-              <a href="#">Product</a>
+            <li id="about-link">
+              <a href="#about">About Us</a>
             </li>
-            <li>
-              <a href="#">Contact</a>
+            <li id="demo-link">
+              <a href="#demo">Demo</a>
+            </li>
+            <li id="testimonials-link">
+              <a href="#testimonials">Testimonials</a>
             </li>
           </ul>
         </div>

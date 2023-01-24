@@ -18,13 +18,13 @@ header.sticky{
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba($color: #fff, $alpha: 0.7);
+  background-color: rgba($color: #fff, $alpha: 0.8);
   z-index: 20;
-  padding: 10px 20px;
+  padding: 5px 20px;
   box-shadow: 0 1px 10px var(--shadow);
   animation: header-drop 0.5s ease;
   border-bottom: 1px solid lightgray;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(9px);
 }
 
 @keyframes header-drop {
@@ -80,6 +80,7 @@ header.sticky{
 
 .header__menu-list li a {
   position: relative;
+  white-space: nowrap;
 }
 
 .header__menu-list li a::after {
@@ -224,6 +225,7 @@ header.sticky{
   .header__menu-list {
     display: none;
   }
+
   header{
     padding: 1px 10px;
   }
@@ -237,24 +239,27 @@ header.sticky{
   }
   .header-float{
     display: block;
-    height: 50vh;
     position: fixed;
+    border-bottom: 1px solid lightgray;
     left: 0;
     top: 0;
     padding: 20px;
     padding-top: 60px;
+    padding-bottom: 0;
     background-color: white;
     width: 100%;
     z-index: 2;
-    max-height: 0;
     transition: all 0.5s ease;
     overflow-y: hidden;
     visibility: hidden;
-    
+    transform: translateY(-30px);
+    opacity: 0;
+    box-shadow: 0 2px 10px rgba(211, 211, 211, 0.5);
   }
   .header-float.expand{
     visibility: visible;
-    max-height: 60vh;
+    transform: translateY(0px);
+    opacity: 1;
   }
   .header-float ul{
     display: flex;
@@ -264,8 +269,11 @@ header.sticky{
     padding: 20px 0;
     text-align: left;
     width: 100%;
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 0.5px solid var(--gray);
     
+  }
+  .header-float ul li:last-child{
+    border-bottom: none;
   }
   .header__card-holder p{
     font-size: 0.8rem;
@@ -290,6 +298,7 @@ header.sticky{
 }
 
 @media screen and (max-width: 650px){
+
   .header__msg-box-left{
     display: none;
   }
@@ -309,6 +318,7 @@ header.sticky{
 }
 
 @media screen and (max-width: 450px) {
+  
   .header-section {
     padding: 10px 10px;
     margin-bottom: 10px;
@@ -331,7 +341,7 @@ header.sticky{
     width: 100%;
   }
   .header__image-box img {
-    transform: scale(1.15) translateX(-40px);
+    transform: scale(1.15) translateX(15px);
     transform-origin: center center;
   }
   .header__card-holder {
