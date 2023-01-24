@@ -13,6 +13,7 @@ import Footer from "./comps/footer/Footer";
 import Offers from "./comps/offers/Offers";
 function App() {
   const [buttonAdded, setButtonAdded] = React.useState(false);
+  const activeLink = React.useRef("home");
   window.addEventListener("scroll", () => {
     let sections = document.querySelectorAll("section");
     let current = "home";
@@ -20,15 +21,17 @@ function App() {
       if (item.offsetTop <= window.scrollY) {
         current = item.id ? item.id : "about";
       }
-
-      document
-        .querySelectorAll(".header__menu-list li, .header-float li")
-        .forEach((item) => {
-          item.classList.remove("active-link");
-          if (item.querySelector(`a[href="#${current}"]`)) {
-            item.classList.add("active-link");
-          }
-        });
+      if (activeLink.current !== current) {
+        document
+          .querySelectorAll(".header__menu-list li, .header-float li")
+          .forEach((item) => {
+            item.classList.remove("active-link");
+            if (item.querySelector(`a[href="#${current}"]`)) {
+              item.classList.add("active-link");
+              activeLink.current = current;
+            }
+          });
+      }
     });
   });
   return (
